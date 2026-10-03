@@ -1,4 +1,4 @@
-# パターン認識特論 2026 ノートブック演習
+# パターン認識特論 ノートブック演習
 
 関西大学大学院「パターン認識特論」の演習用 Jupyter ノートブックです．
 講義スライドの式を NumPy でそのまま動かし，数値で確かめます．
@@ -10,15 +10,13 @@
 |---|---|---|---|
 | 1 | パターン認識とニューラルネットワーク | （演習なし） | － |
 | 2 | ニューラルネットワークの基礎アーキテクチャ | [第02回_演習.ipynb](第02回_演習.ipynb) | 公開 |
-| 3 | 誤差逆伝播法とニューラルネットワークの訓練 | [第03回_演習.ipynb](第03回_演習.ipynb) | 公開 |
-| 4 以降 | | | 講義後に追加 |
+| 3 | 誤差逆伝播法とニューラルネットワークの訓練 |  | 講義後に追加 |
 
 ## 1．準備（初回のみ）
 
 ### 1.1 Anaconda のインストール
 
 [Anaconda Distribution](https://www.anaconda.com/download) をインストールします．
-Miniconda や Miniforge でも同じ手順で動きます．
 
 以降のコマンドは次の画面で実行します．
 
@@ -30,8 +28,8 @@ Miniconda や Miniforge でも同じ手順で動きます．
 Git を使う場合（推奨．後の更新が1コマンドで済みます）：
 
 ```bash
-git clone https://github.com/<ユーザ名>/<レポジトリ名>.git
-cd <レポジトリ名>
+git clone https://github.com/meruemon/PATREC.git
+cd PATREC
 ```
 
 Git を使わない場合は，GitHub のページで **Code → Download ZIP** を選び，展開したフォルダへ `cd` で移動します．
@@ -44,7 +42,7 @@ Git を使わない場合は，GitHub のページで **Code → Download ZIP** 
 conda env create -f environment.yml
 ```
 
-`patrec2026` という名前の環境ができます．確認：
+`patrec` という名前の環境ができます．確認：
 
 ```bash
 conda env list
@@ -100,7 +98,6 @@ GPU 版の PyTorch を使いたい場合は，環境を作った後に [PyTorch 
 
 - 各節の最後に **やってみよう** があります．`# TODO` の行を書き換えて実行します．
 - 直後に **解答** セルがあります．先に自分で試してから見てください．
-- 冒頭の表に，対応するスライドのページを載せています．
 
 ## 6．うまくいかないとき
 
@@ -112,8 +109,6 @@ GPU 版の PyTorch を使いたい場合は，環境を作った後に [PyTorch 
 | `ModuleNotFoundError` | `conda activate patrec2026` を忘れていないか確認する．VS Code はカーネルが `patrec2026` か確認する |
 | 図の日本語が □ になる | 図のラベルは英語にしてあるので通常は起きない．自分で日本語を入れる場合は `pip install japanize-matplotlib` の後に `import japanize_matplotlib` を追加する |
 | 結果がおかしい | メニューの **Kernel → Restart Kernel and Run All Cells** で最初から実行し直す |
-
-解決しない場合は，エラーメッセージの全文を添えて担当教員に連絡してください．
 
 ## 7．利用について
 
