@@ -1,0 +1,21 @@
+# パターン認識特論  ノートブック演習用の conda 環境
+#   作成: conda env create -f environment.yml
+#   更新: conda env update -f environment.yml --prune
+#   削除: conda env remove -n patrec2026
+name: patrec
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  # 数値計算と描画（全回で使用）
+  - numpy>=2.0
+  - matplotlib>=3.8
+  # Jupyter
+  - jupyterlab>=4.0
+  - notebook>=7.0
+  - ipykernel
+  # PyTorch（各回の「任意」の節と，後半の回で使用．CPU 版）
+  - pytorch>=2.3
+  - torchvision
+  - pip
